@@ -1,0 +1,1 @@
+DROP INDEX album_photos_album_idx
