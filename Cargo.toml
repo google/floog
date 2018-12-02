@@ -1,0 +1,6 @@
+[package]
+name = "flickr2goog"
+version = "0.1.0"
+authors = ["haxney <dan@haxney.org>"]
+
+[dependencies]
