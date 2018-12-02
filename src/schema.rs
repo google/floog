@@ -1,4 +1,13 @@
 table! {
+    album_photos (id) {
+        id -> Nullable<Integer>,
+        album_id -> Integer,
+        photo_flickr_id -> Integer,
+        sequence_num -> Integer,
+    }
+}
+
+table! {
     albums (id) {
         id -> Nullable<Integer>,
         file_id -> Integer,
@@ -36,10 +45,12 @@ table! {
     }
 }
 
+joinable!(album_photos -> albums (album_id));
 joinable!(albums -> files (file_id));
 joinable!(files -> archives (archive_id));
 
 allow_tables_to_appear_in_same_query!(
+    album_photos,
     albums,
     archives,
     files,
