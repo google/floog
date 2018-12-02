@@ -45,13 +45,28 @@ table! {
     }
 }
 
+table! {
+    photo_metadata (id) {
+        id -> Nullable<Integer>,
+        file_id -> Integer,
+        flickr_id -> Integer,
+        name -> Text,
+        description -> Text,
+        taken_time -> Nullable<Timestamp>,
+        imported_time -> Nullable<Timestamp>,
+        privacy -> Nullable<Text>,
+    }
+}
+
 joinable!(album_photos -> albums (album_id));
 joinable!(albums -> files (file_id));
 joinable!(files -> archives (archive_id));
+joinable!(photo_metadata -> files (file_id));
 
 allow_tables_to_appear_in_same_query!(
     album_photos,
     albums,
     archives,
     files,
+    photo_metadata,
 );
