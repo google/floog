@@ -1,8 +1,8 @@
-# Flickr2Goog
+# Photo Dump Uploader
 
-This is a tool to take exported Flickr data, as produced by the "Your Flickr
-Data" option on https://www.flickr.com/account . It will upload photos to Google
-Photos and preserve the album membership of the photos.
+This is a tool to upload exported Flickr data (as produced by the "Your Flickr
+Data" option on https://www.flickr.com/account) to Google Photos, preserving the
+album membership.
 
 ## Design
 
@@ -14,6 +14,6 @@ to the SQLite database, so the local data that it writes is quite small.
 ## Limitations
 
 The Google Photos API is very limited in what can be uploaded, so there is not a
-1:1 conversion. In particular, the API [only allows one album per
-photo](https://issuetracker.google.com/issues/109505022), so if a photo exists
-in two or more albums, it will only be added to one album.
+1:1 conversion. In particular, there is no nesting of albums as there is in
+Flickr collections, so the structure of any collections is lost. Also, Google
+Photos has no concept of photo tags either.
