@@ -17,3 +17,7 @@ The Google Photos API is very limited in what can be uploaded, so there is not a
 1:1 conversion. In particular, there is no nesting of albums as there is in
 Flickr collections, so the structure of any collections is lost. Also, Google
 Photos has no concept of photo tags either.
+
+## Disclaimer
+
+This is not an officially supported Google product.
