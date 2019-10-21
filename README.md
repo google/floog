@@ -1,4 +1,4 @@
-# Photo Dump Uploader
+# Floog
 
 This is a tool to upload exported Flickr data (as produced by the "Your Flickr
 Data" option on https://www.flickr.com/account) to Google Photos, preserving the
@@ -20,4 +20,6 @@ Photos has no concept of photo tags either.
 
 ## Disclaimer
 
-This is not an officially supported Google product.
+This is not an officially supported Google product. This is also not an official
+Flickr project.
+
